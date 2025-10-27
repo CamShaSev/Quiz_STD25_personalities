@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Quiz de personnalité et aptitudes</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; max-width: 900px; margin: auto; }
+  h1, h2 { text-align: center; }
+  .question { margin-bottom: 20px; }
+  button { padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 10px; }
+  #result { margin-top: 30px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Quiz : Personnalité et Aptitudes</h1>
+
+<form id="quizForm">
+  <!-- Section 1 : Personnalité -->
+  <h2>1. QUI ÊTES-VOUS ? VOS TRAITS DE PERSONNALITÉ</h2>
+
+  <!-- Questions 1.1 à 1.6 -->
+  <div class="question">
+    <p>1.1 Qu'est-ce qui correspond le mieux à votre personnalité ?</p>
+    <label><input type="radio" name="q1" value="A" required> A. Patient·e : D'un naturel calme...</label><br>
+    <label><input type="radio" name="q1" value="F"> F. Organisé·e : Vous aimez quand tout est préparé...</label><br>
+    <label><input type="radio" name="q1" value="D"> D. Attentif·ve aux autres...</label><br>
+    <label><input type="radio" name="q1" value="C"> C. Expressif·ve...</label><br>
+    <label><input type="radio" name="q1" value="E"> E. Persuasif·ve...</label><br>
+    <label><input type="radio" name="q1" value="B"> B. Critique...</label>
+  </div>
+
+  <div class="question">
+    <p>1.2 Qu'est-ce qui vous décrit le mieux ?</p>
+    <label><input type="radio" name="q2" value="B" required> B. Curieux·se...</label><br>
+    <label><input type="radio" name="q2" value="E"> E. Energique...</label><br>
+    <label><input type="radio" name="q2" value="A"> A. Minutieux·se...</label><br>
+    <label><input type="radio" name="q2" value="D"> D. Coopératif·ve...</label><br>
+    <label><input type="radio" name="q2" value="F"> F. Respectueux·se de l'autorité...</label><br>
+    <label><input type="radio" name="q2" value="C"> C. Imaginatif·ve...</label>
+  </div>
+
+  <div class="question">
+    <p>1.3 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q3" value="E" required> E. Audacieux·se...</label><br>
+    <label><input type="radio" name="q3" value="B"> B. Persévérant·e...</label><br>
+    <label><input type="radio" name="q3" value="D"> D. Compréhensif·ve...</label><br>
+    <label><input type="radio" name="q3" value="A"> A. Constant·e...</label><br>
+    <label><input type="radio" name="q3" value="C"> C. Emotif·ve...</label><br>
+    <label><input type="radio" name="q3" value="F"> F. Perfectionniste...</label>
+  </div>
+
+  <div class="question">
+    <p>1.4 Qu'est-ce qui vous décrit le mieux ?</p>
+    <label><input type="radio" name="q4" value="C" required> C. D'esprit indépendant...</label><br>
+    <label><input type="radio" name="q4" value="A"> A. Vigoureux·se...</label><br>
+    <label><input type="radio" name="q4" value="E"> E. Sûr·e de soi...</label><br>
+    <label><input type="radio" name="q4" value="B"> B. Logique...</label><br>
+    <label><input type="radio" name="q4" value="F"> F. Raisonnable...</label><br>
+    <label><input type="radio" name="q4" value="D"> D. Dévoué·e...</label>
+  </div>
+
+  <div class="question">
+    <p>1.5 Qu'est-ce qui vous décrit le mieux ?</p>
+    <label><input type="radio" name="q5" value="D" required> D. Sympathique...</label><br>
+    <label><input type="radio" name="q5" value="C"> C. Original·e...</label><br>
+    <label><input type="radio" name="q5" value="B"> B. Objectif·ve...</label><br>
+    <label><input type="radio" name="q5" value="A"> A. Pratique...</label><br>
+    <label><input type="radio" name="q5" value="F"> F. Consciencieux·se...</label><br>
+    <label><input type="radio" name="q5" value="E"> E. Ambitieux·se...</label>
+  </div>
+
+  <div class="question">
+    <p>1.6 Qu'est-ce qui vous décrit le mieux ?</p>
+    <label><input type="radio" name="q6" value="F" required> F. Ponctuel·le...</label><br>
+    <label><input type="radio" name="q6" value="D"> D. Communicatif·ve...</label><br>
+    <label><input type="radio" name="q6" value="E"> E. Déterminé·e...</label><br>
+    <label><input type="radio" name="q6" value="B"> B. Intellectuel·le...</label><br>
+    <label><input type="radio" name="q6" value="C"> C. Intuitif·ve...</label><br>
+    <label><input type="radio" name="q6" value="A"> A. Concret·ète...</label>
+  </div>
+
+  <!-- Section 2 : Aptitudes -->
+  <h2>2. QUE SAVEZ-VOUS FAIRE ? VOS APTITUDES</h2>
+
+  <!-- Questions 2.1 à 2.6 -->
+  <div class="question">
+    <p>2.1 Qu'est-ce qui vous décrit le mieux ?</p>
+    <label><input type="radio" name="q7" value="A" required> A. Bon·ne en EPS...</label><br>
+    <label><input type="radio" name="q7" value="D"> D. Je sais mettre les autres en confiance...</label><br>
+    <label><input type="radio" name="q7" value="B"> B. Je réussis bien en maths...</label><br>
+    <label><input type="radio" name="q7" value="E"> E. Capacité à être délégué·e de classe...</label><br>
+    <label><input type="radio" name="q7" value="C"> C. Je sais faire un travail original...</label><br>
+    <label><input type="radio" name="q7" value="F"> F. J'apprends régulièrement mes leçons...</label>
+  </div>
+
+  <div class="question">
+    <p>2.2 Qu'est-ce qui vous décrit le mieux ?</p>
+    <label><input type="radio" name="q8" value="C" required> C. Je pratique régulièrement une activité artistique...</label><br>
+    <label><input type="radio" name="q8" value="E"> E. Je prends des initiatives...</label><br>
+    <label><input type="radio" name="q8" value="A"> A. Je sais faire fonctionner facilement un appareil...</label><br>
+    <label><input type="radio" name="q8" value="B"> B. Je sais utiliser l'information...</label><br>
+    <label><input type="radio" name="q8" value="D"> D. Je sais réconcilier les personnes...</label><br>
+    <label><input type="radio" name="q8" value="F"> F. Je m'organise facilement...</label>
+  </div>
+
+  <div class="question">
+    <p>2.3 Qu'est-ce qui vous décrit le mieux ?</p>
+    <label><input type="radio" name="q9" value="F" required> F. Je tiens mon cahier de texte à jour...</label><br>
+    <label><input type="radio" name="q9" value="A"> A. Je sais faire des travaux de bricolage...</label><br>
+    <label><input type="radio" name="q9" value="C"> C. Je vois rapidement ce qui manque à un décor...</label><br>
+    <label><input type="radio" name="q9" value="B"> B. Je comprends vite la structure d'un texte...</label><br>
+    <label><input type="radio" name="q9" value="E"> E. J'organise facilement le travail en classe...</label><br>
+    <label><input type="radio" name="q9" value="D"> D. J'accueille les nouveaux élèves...</label>
+  </div>
+
+  <div class="question">
+    <p>2.4 Qu'est-ce qui vous décrit le mieux ?</p>
+    <label><input type="radio" name="q10" value="B" required> B. Je cherche l'explication de ce que je ne comprends pas...</label><br>
+    <label><input type="radio" name="q10" value="C"> C. Je sais apprécier une œuvre d'art...</label><br>
+    <label><input type="radio" name="q10" value="F"> F. Je fais mon travail jusqu'au bout...</label><br>
+    <label><input type="radio" name="q10" value="D"> D. Je comprends facilement les autres...</label><br>
+    <label><input type="radio" name="q10" value="E"> E. J'anime souvent les discussions...</label><br>
+    <label><input type="radio" name="q10" value="A"> A. Je suis résistant à la fatigue...</label>
+  </div>
+
+  <div class="question">
+    <p>2.5 Qu'est-ce qui vous décrit le mieux ?</p>
+    <label><input type="radio" name="q11" value="D" required> D. Je sais travailler avec les autres...</label><br>
+    <label><input type="radio" name="q11" value="B"> B. Je suis capable de bien décomposer une question...</label><br>
+    <label><input type="radio" name="q11" value="A"> A. Je sais réparer un appareil défectueux...</label><br>
+    <label><input type="radio" name="q11" value="F"> F. Je suis facilement les consignes...</label><br>
+    <label><input type="radio" name="q11" value="E"> E. Je sais persuader mon entourage...</label><br>
+    <label><input type="radio" name="q11" value="C"> C. J'invente facilement la suite d'un texte...</label>
+  </div>
+
+  <div class="question">
+    <p>2.6 Qu'est-ce qui vous décrit le mieux ?</p>
+    <label><input type="radio" name="q12" value="E" required> E. Je sais diriger le travail d'un groupe d'élèves...</label><br>
+    <label><input type="radio" name="q12" value="A"> A. Je suis habile de mes mains...</label><br>
+    <label><input type="radio" name="q12" value="D"> D. Je sais rendre service...</label><br>
+    <label><input type="radio" name="q12" value="C"> C. Dans un groupe, je sens vite l'atmosphère...</label><br>
+    <label><input type="radio" name="q12" value="F"> F. Je sais être méthodique...</label><br>
+    <label><input type="radio" name="q12" value="B"> B. Je sais faire preuve de rigueur et d'objectivité...</label>
+  </div>
+<!-- Section 3 : Centres d'intérêt -->
+<h2>3. QU’AIMEZ-VOUS FAIRE ? VOS CENTRES D’INTÉRÊT</h2>
+
+<form id="centresForm">
+  <!-- Question 3.1 -->
+  <div class="question">
+    <p>3.1 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q7" value="C" required> C. Visiter un musée...</label><br>
+    <label><input type="radio" name="q7" value="A"> A. Avoir des activités à l'extérieur...</label><br>
+    <label><input type="radio" name="q7" value="F"> F. Manipuler les chiffres...</label><br>
+    <label><input type="radio" name="q7" value="B"> B. Étudier les choses ou les évènements...</label><br>
+    <label><input type="radio" name="q7" value="E"> E. Gérer des situations imprévues...</label><br>
+    <label><input type="radio" name="q7" value="D"> D. Vous faire de nouveaux ami·e·s...</label>
+  </div>
+
+  <!-- Question 3.2 -->
+  <div class="question">
+    <p>3.2 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q8" value="A" required> A. Utiliser des outils...</label><br>
+    <label><input type="radio" name="q8" value="C"> C. Passer d'une activité à l'autre...</label><br>
+    <label><input type="radio" name="q8" value="B"> B. Comprendre le fonctionnement d'un appareil...</label><br>
+    <label><input type="radio" name="q8" value="E"> E. Prendre des initiatives...</label><br>
+    <label><input type="radio" name="q8" value="F"> F. Ne faire qu'une seule chose à la fois...</label><br>
+    <label><input type="radio" name="q8" value="D"> D. Animer des activités collectives...</label>
+  </div>
+
+  <!-- Question 3.3 -->
+  <div class="question">
+    <p>3.3 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q9" value="E" required> E. Donner des ordres...</label><br>
+    <label><input type="radio" name="q9" value="B"> B. Prendre une décision après mûre réflexion...</label><br>
+    <label><input type="radio" name="q9" value="D"> D. Être en contact avec les autres...</label><br>
+    <label><input type="radio" name="q9" value="A"> A. Faire du sport...</label><br>
+    <label><input type="radio" name="q9" value="F"> F. Avoir des activités clairement définies...</label><br>
+    <label><input type="radio" name="q9" value="C"> C. Développer vos qualités artistiques...</label>
+  </div>
+
+  <!-- Question 3.4 -->
+  <div class="question">
+    <p>3.4 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q10" value="B" required> B. Rechercher des informations...</label><br>
+    <label><input type="radio" name="q10" value="D"> D. Partager des informations avec vos ami·e·s...</label><br>
+    <label><input type="radio" name="q10" value="C"> C. Faire vos activités en toute indépendance...</label><br>
+    <label><input type="radio" name="q10" value="A"> A. Fabriquer des objets...</label><br>
+    <label><input type="radio" name="q10" value="F"> F. Travailler avec soin pour obtenir un résultat parfait...</label><br>
+    <label><input type="radio" name="q10" value="E"> E. Convaincre vos interlocuteurs...</label>
+  </div>
+
+  <!-- Question 3.5 -->
+  <div class="question">
+    <p>3.5 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q11" value="D" required> D. Communiquer avec les gens...</label><br>
+    <label><input type="radio" name="q11" value="E"> E. Organiser le travail d'un groupe...</label><br>
+    <label><input type="radio" name="q11" value="A"> A. Réparer un objet...</label><br>
+    <label><input type="radio" name="q11" value="C"> C. Découvrir de nouvelles façons de faire...</label><br>
+    <label><input type="radio" name="q11" value="B"> B. Concevoir ou améliorer les choses...</label><br>
+    <label><input type="radio" name="q11" value="F"> F. Respecter les règles...</label>
+  </div>
+
+  <!-- Question 3.6 -->
+  <div class="question">
+    <p>3.6 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q12" value="F" required> F. Avoir vos affaires parfaitement rangées...</label><br>
+    <label><input type="radio" name="q12" value="D"> D. Aider quelqu'un à trouver son chemin...</label><br>
+    <label><input type="radio" name="q12" value="A"> A. Réaliser des tâches concrètes...</label><br>
+    <label><input type="radio" name="q12" value="C"> C. Exprimer vos émotions...</label><br>
+    <label><input type="radio" name="q12" value="B"> B. Résoudre des problèmes abstraits...</label><br>
+    <label><input type="radio" name="q12" value="E"> E. Obtenir des réductions...</label>
+  </div>
+</form>
+
+<!-- Section 4 : Envies -->
+<h2>3. QU’AIMERIEZ-VOUS FAIRE ? VOS ENVIES</h2>
+
+<form id="enviesForm">
+  <!-- Question 4.1 -->
+  <div class="question">
+    <p>4.1 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q13" value="A" required> A. Pratiquer une activité proche de la nature...</label><br>
+    <label><input type="radio" name="q13" value="E"> E. Travailler à mon compte...</label><br>
+    <label><input type="radio" name="q13" value="C"> C. Créer une œuvre...</label><br>
+    <label><input type="radio" name="q13" value="B"> B. Développer de nouveaux procédés...</label><br>
+    <label><input type="radio" name="q13" value="D"> D. Soigner des malades...</label><br>
+    <label><input type="radio" name="q13" value="F"> F. Accomplir des tâches administratives...</label>
+  </div>
+
+  <!-- Question 4.2 -->
+  <div class="question">
+    <p>4.2 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q14" value="E" required> E. Avoir des responsabilités...</label><br>
+    <label><input type="radio" name="q14" value="D"> D. Conseiller un public...</label><br>
+    <label><input type="radio" name="q14" value="B"> B. Faire de la recherche...</label><br>
+    <label><input type="radio" name="q14" value="A"> A. Fabriquer des objets...</label><br>
+    <label><input type="radio" name="q14" value="F"> F. Répéter la même activité...</label><br>
+    <label><input type="radio" name="q14" value="C"> C. Ressentir des émotions...</label>
+  </div>
+
+  <!-- Question 4.3 -->
+  <div class="question">
+    <p>4.3 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q15" value="F" required> F. Faire respecter l'ordre...</label><br>
+    <label><input type="radio" name="q15" value="D"> D. Écouter les autres...</label><br>
+    <label><input type="radio" name="q15" value="B"> B. Structurer un programme informatique...</label><br>
+    <label><input type="radio" name="q15" value="C"> C. Communiquer des informations...</label><br>
+    <label><input type="radio" name="q15" value="A"> A. Réparer des appareils défectueux...</label><br>
+    <label><input type="radio" name="q15" value="E"> E. Voyager pour mon travail...</label>
+  </div>
+
+  <!-- Question 4.4 -->
+  <div class="question">
+    <p>4.4 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q16" value="F" required> F. Faire un travail organisé et méticuleux...</label><br>
+    <label><input type="radio" name="q16" value="A"> A. Entretenir ou maintenir en état un véhicule...</label><br>
+    <label><input type="radio" name="q16" value="E"> E. Devenir chef·fe de projets...</label><br>
+    <label><input type="radio" name="q16" value="B"> B. Approfondir vos connaissances sur un sujet donné...</label><br>
+    <label><input type="radio" name="q16" value="C"> C. Montrer votre originalité...</label><br>
+    <label><input type="radio" name="q16" value="D"> D. Accompagner des gens en difficultés...</label>
+  </div>
+
+  <!-- Question 4.5 -->
+  <div class="question">
+    <p>4.5 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q17" value="B" required> B. Concevoir de nouvelles choses...</label><br>
+    <label><input type="radio" name="q17" value="C"> C. Imaginer le décor d'une pièce...</label><br>
+    <label><input type="radio" name="q17" value="E"> E. Vendre un produit, un service...</label><br>
+    <label><input type="radio" name="q17" value="A"> A. Pratiquer une activité physique...</label><br>
+    <label><input type="radio" name="q17" value="D"> D. Aider les gens...</label><br>
+    <label><input type="radio" name="q17" value="F"> F. Travailler dans un bureau...</label>
+  </div>
+
+  <!-- Question 4.6 -->
+  <div class="question">
+    <p>4.6 Qu'est-ce qui vous correspond le mieux ?</p>
+    <label><input type="radio" name="q18" value="C" required> C. Exercer une activité artistique...</label><br>
+    <label><input type="radio" name="q18" value="B"> B. Analyser les résultats d'une expérience...</label><br>
+    <label><input type="radio" name="q18" value="A"> A. Vous occuper d'animaux...</label><br>
+    <label><input type="radio" name="q18" value="E"> E. Diriger et organiser le travail d'une équipe...</label><br>
+    <label><input type="radio" name="q18" value="D"> D. Transmettre des connaissances...</label><br>
+    <label><input type="radio" name="q18" value="F"> F. Protéger des biens ou des personnes...</label>
+  </div>
+</form>
+
+  <button type="button" onclick="calculerResultatsGlobaux()">Voir mes profils</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+function calculerResultatsGlobaux() {
+  const form = document.getElementById('quizForm');
+  const total = { A:0, B:0, C:0, D:0, E:0, F:0 };
+
+  for (let i=1; i<=12; i++) {
+    const q = form['q'+i].value;
+    total[q]++;
+  }
+
+  const sorted = Object.entries(total).sort((a,b) => b[1]-a[1]);
+
+  const profils = {
+    A: "Pratique / Habileté manuelle : vous aimez créer, maintenir, bricoler...",
+    B: "Curieux / Logique : vous aimez chercher, analyser et comprendre...",
+    C: "Artistique : vous savez inventer, imaginer et créer...",
+    D: "Social : vous aimez aider, écouter et soutenir les autres...",
+    E: "Entreprenant / Leader : vous savez organiser, décider et persuader...",
+    F: "Rigoureux / Méthodique : vous êtes structuré, organisé et précis..."
+  };
+
+  document.getElementById('result').innerHTML = `
+    <h3>Résultats Globaux :</h3>
+    <strong>Profil principal :</strong> ${sorted[0][0]} (${sorted[0][1]}) : ${profils[sorted[0][0]]}<br><br>
+    <strong>Premier profil secondaire :</strong> ${sorted[1][0]} (${sorted[1][1]}) : ${profils[sorted[1][0]]}<br><br>
+    <strong>Second profil secondaire :</strong> ${sorted[2][0]} (${sorted[2][1]}) : ${profils[sorted[2][0]]}<br>
+  `;
+}
+</script>
+
+</body>
+</html>
